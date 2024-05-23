@@ -32,7 +32,7 @@ This AI-powered email generation tool can helps you write better emails in less 
         .then(data => {
           const lines = data.text.split("\n")
           setSubject(lines[0])
-          setBody(lines.slice(1).join('\n'))
+          setBody(lines.slice(1).join('\n') + "\n\nGenerated for you by Gemini AI")
         })
         .catch(error => {
           console.error(error);
